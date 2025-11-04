@@ -31,7 +31,7 @@ main {
 .landing-container h1 {
   font-family: "Playfair Display", serif; /* ¡CORREGIDO! Usamos $font-titulo */
   font-size: 4rem;
-  color: #587C53;
+  color: #85835c;
   margin-bottom: 0.5rem;
 }
 .landing-container .subtitle {
@@ -41,7 +41,7 @@ main {
   margin-bottom: 2rem;
 }
 .landing-container #enter-button {
-  background-color: #587C53;
+  background-color: #85835c;
   color: #FFFFFF;
   padding: 15px 30px;
   border: none;
@@ -51,7 +51,7 @@ main {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .landing-container #enter-button:hover {
-  background-color: rgb(66.3188405797, 93.4492753623, 62.5507246377); /* ¡CORREGIDO! Usar color.darken */
+  background-color: rgb(102.8533333333, 101.3066666667, 71.1466666667); /* ¡CORREGIDO! Usar color.darken */
   transform: scale(1.05);
 }
 
@@ -62,13 +62,12 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px 0 60px 0;
+  padding: 0px 0 0px 0;
   background-color: #F7F5F0;
 }
 .hero-section .hero-image {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
-  margin-bottom: 40px;
 }
 
 .countdown-timer {
@@ -88,7 +87,7 @@ main {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   font-weight: 700;
-  color: #587C53;
+  color: #85835c;
   line-height: 1;
 }
 .countdown-timer .countdown-item .countdown-label {
@@ -133,7 +132,7 @@ main {
   margin: 5px 0;
 }
 .itinerary-section .when-card {
-  background-color: #587C53;
+  background-color: #85835c;
   color: #FFFFFF;
 }
 .itinerary-section .when-card .icon-large {
@@ -142,15 +141,15 @@ main {
 .itinerary-section .where-card {
   background-color: #F7F5F0;
   color: #333333;
-  border: 1px solid #A0B99B;
+  border: 1px solid #ebe4d2;
 }
 .itinerary-section .where-card .icon-large {
-  color: #587C53;
+  color: #85835c;
 }
 .itinerary-section .where-card .map-button {
   background-color: transparent;
-  color: #587C53;
-  border: 2px solid #587C53;
+  color: #85835c;
+  border: 2px solid #85835c;
   padding: 12px 25px;
   margin-top: 20px;
   border-radius: 5px;
@@ -160,14 +159,14 @@ main {
   transition: all 0.3s ease;
 }
 .itinerary-section .where-card .map-button:hover {
-  background-color: #587C53;
+  background-color: #85835c;
   color: #FFFFFF;
 }
 
 /* styles/sass/layout/_phrases.scss */
 /* ¡IMPORTACIÓN CORREGIDA! */
 .invitation-phrase-section {
-  background-color: #587C53;
+  background-color: #85835c;
   padding: 80px 20px;
   text-align: center;
   color: #FFFFFF;
@@ -207,7 +206,7 @@ main {
 }
 
 .te-espero-section {
-  background: url("../assets/images/fireworks.jpg") no-repeat center center/cover;
+  background: url("../../../assets/images/nueva.png") no-repeat center center/cover;
   height: 180px;
   display: flex;
   justify-content: center;
@@ -246,7 +245,7 @@ main {
 }
 .rsvp-section .rsvp-header .icon-large {
   font-size: 4rem;
-  color: #587C53;
+  color: #85835c;
   margin-bottom: 20px;
 }
 .rsvp-section .rsvp-header h2 {
@@ -264,7 +263,7 @@ main {
 .rsvp-section .rsvp-header .price-button {
   background-color: #FFFFFF;
   color: #333333;
-  border: 1px solid #A0B99B;
+  border: 1px solid #ebe4d2;
   padding: 12px 25px;
   border-radius: 5px;
   cursor: pointer;
@@ -278,11 +277,11 @@ main {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .rsvp-section .rsvp-header .price-button:hover {
-  background-color: #A0B99B;
+  background-color: #ebe4d2;
   color: #FFFFFF;
 }
 .rsvp-section .rsvp-form-container {
-  background-color: #587C53;
+  background-color: #85835c;
   padding: 40px 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -344,7 +343,7 @@ main {
   cursor: pointer;
 }
 .rsvp-section .rsvp-form-container .form-group .select-wrapper .form-select option {
-  background-color: #86be7e;
+  background-color: #e3d1b0;
   color: #FFFFFF;
 }
 .rsvp-section .rsvp-form-container .form-group .select-wrapper .form-select:focus {
@@ -372,7 +371,7 @@ main {
 }
 .rsvp-section .rsvp-form-container .confirm-button {
   background-color: #FFFFFF;
-  color: #86be7e;
+  color: #333333;
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
@@ -414,7 +413,7 @@ main {
   background-color: #F7F5F0;
   margin: auto;
   padding: 30px;
-  border: 1px solid #A0B99B;
+  border: 1px solid #ebe4d2;
   width: 90%;
   max-width: 400px;
   border-radius: 10px;
@@ -425,7 +424,7 @@ main {
 .modal .modal-content h3 {
   font-family: "Playfair Display", serif;
   font-size: 1.8rem;
-  color: #587C53;
+  color: #85835c;
   margin-bottom: 15px;
 }
 .modal .modal-content p {
@@ -453,7 +452,7 @@ main {
   cursor: pointer;
 }
 .modal .modal-content .close-button:hover, .modal .modal-content .close-button:focus {
-  color: #587C53;
+  color: #85835c;
   text-decoration: none;
   cursor: pointer;
 }

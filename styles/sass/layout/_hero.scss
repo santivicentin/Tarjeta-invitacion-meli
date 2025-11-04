@@ -8,13 +8,12 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px 0 60px 0;
+    padding: 0px 0 0px 0;
     background-color: variables.$color-secundario; // Color de fondo crema/claro
 
     .hero-image {
-        max-width: 90%;
+        max-width: 100%;
         height: auto;
-        margin-bottom: 40px;
     }
 }
 
