@@ -1,0 +1,120 @@
+/* styles/sass/mq/_responsive.scss */
+
+// ----------------------------------------
+// VARIABLES & MIXINS para media queries
+// ----------------------------------------
+// Asegúrate de que los archivos utilities estén en la ruta correcta.
+@use '../utilities/variables'; 
+@use '../utilities/mixins';
+
+// Puntos de quiebre (Breakpoints)
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+
+// ----------------------------------------
+// 1. ESTILOS PARA TABLET (Min-width: 768px)
+// ----------------------------------------
+@media (min-width: $breakpoint-tablet) {
+    
+    // BODY & MAIN
+    body {
+        font-size: 17px; 
+    }
+    
+    // LAYOUT PRINCIPAL (Contenedores)
+    // Aumentar el padding lateral para que el contenido no esté pegado a los bordes
+    .hero-section,
+    .itinerary-section,
+    .rsvp-section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    // CONTADOR
+    .countdown-timer {
+        gap: 30px;
+        .countdown-item .countdown-number {
+            font-size: 4rem;
+        }
+    }
+
+    // ITINERARIO (Tarjetas Lado a Lado)
+   .itinerary-section {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-around;
+        align-items: stretch; /* Mantiene la misma altura */
+        gap: 30px; 
+    }
+
+    // 📌 AJUSTE CLAVE: Aplicar Flexbox a la tarjeta verde para centrar su contenido.
+    .itinerary-card:first-child { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra el contenido verticalmente (arriba/abajo) */
+        align-items: center;    /* Centra el contenido horizontalmente (izquierda/derecha) */
+    }
+    
+    .itinerary-card {
+        width: 45%; 
+        margin-bottom: 0;
+        padding: 50px 30px;
+    }
+    
+    // TE ESPERO (Ajuste de tamaño para Desktop/Tablet)
+    // Crecer la fuente para que se vea más grande en pantallas grandes
+    .te-espero-section .te-espero-content h2 {
+        font-size: 3.5rem; 
+    }
+
+    // FORMULARIO RSVP
+    .rsvp-section .rsvp-form-container {
+        max-width: 700px;
+        padding: 50px 40px;
+    }
+    
+    // MODAL
+    .modal .modal-content {
+        max-width: 500px;
+    }
+}
+
+
+// ----------------------------------------
+// 2. ESTILOS PARA ESCRITORIO (Min-width: 1024px)
+// ----------------------------------------
+@media (min-width: $breakpoint-desktop) {
+    
+    body {
+        font-size: 18px; 
+    }
+
+    // LAYOUT PRINCIPAL (Aumentar el padding lateral)
+    .hero-section,
+    .itinerary-section,
+    .rsvp-section {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    // CONTADOR
+    .countdown-timer .countdown-item .countdown-number {
+        font-size: 5rem;
+    }
+    
+    // TÍTULOS GRANDES
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    // ITINERARIO
+    .itinerary-section .itinerary-card {
+        width: 40%;
+    }
+
+    // FORMULARIO RSVP
+    .rsvp-section .rsvp-form-container {
+        max-width: 800px;
+    }
+}

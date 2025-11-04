@@ -1,0 +1,9 @@
+@use '../utilities/variables';
+
+body {
+    background-color: variables.$color-secundario; /* Fondo crema/claro definido en variables */
+    font-family: variables.$font-cuerpo;
+    color: variables.$color-texto-oscuro;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita barras de scroll horizontales */
+}

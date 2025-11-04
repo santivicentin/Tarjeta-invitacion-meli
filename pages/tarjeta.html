@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Felices 50 Años, Melina!</title>
+    <link rel="stylesheet" href="../styles/css/style.css"> 
+    
+    <link href="http://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main>
+        
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                
+                <img src="../assets/images/mis50melina.png" alt="MIS 50 MELINA" class="hero-image">
+                
+                <div id="countdown" class="countdown-timer">
+                    <div class="countdown-item">
+                        <span id="days" class="countdown-number">0</span>
+                        <span class="countdown-label">DÍAS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours" class="countdown-number">0</span>
+                        <span class="countdown-label">HORAS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes" class="countdown-number">0</span>
+                        <span class="countdown-label">MINUTOS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds" class="countdown-number">0</span>
+                        <span class="countdown-label">SEGUNDOS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="itinerary" class="itinerary-section">
+            
+            <div class="itinerary-card when-card">
+                <i class="fas fa-calendar-alt icon-large"></i> 
+                <p class="card-title">¿CUÁNDO?</p>
+                <p class="card-text">06 DE DICIEMBRE 2025</p>
+                <p class="card-text">| 21:00 HS |</p>
+            </div>
+            
+            <div class="itinerary-card where-card">
+                <i class="fas fa-map-marker-alt icon-large"></i> 
+                <p class="card-title">¿DÓNDE?</p>
+                <p class="card-text">Salón de Fiestas La Fraternal</p>
+                <p class="card-text">San Martín 1857, Franck, Santa Fe</p>
+                <button id="view-map-button" class="map-button">COMO LLEGAR</button>
+            </div>
+        </section>
+        <section id="invitation-phrase" class="invitation-phrase-section">
+            <div class="phrase-container">
+                <p>TE INVITO A FESTEJAR ESTA NOCHE <strong>¡INOLVIDABLE!</strong></p>
+            </div>
+        </section>
+
+        <section id="rsvp" class="rsvp-section">
+            <div class="rsvp-header">
+                <i class="fas fa-envelope icon-large"></i> 
+                <h2>CONFIRMÁ TU ASISTENCIA</h2>
+                <p>ANTES DEL 01 DE DICIEMBRE 2025</p>
+                <button id="view-price-button" class="price-button">VER VALOR TARJETA</button>
+            </div>
+
+            <form id="rsvp-form" class="rsvp-form-container">
+                <div class="form-group">
+                    <label for="num-persons">Número de personas a confirmar</label>
+                    <div class="select-wrapper">
+                        <select id="num-persons" class="form-select">
+                            <option value="1">1 persona</option>
+                            <option value="2">2 personas</option>
+                            <option value="3">3 personas</option>
+                            <option value="4">4 personas</option>
+                        </select>
+                        <i class="fas fa-chevron-down select-arrow"></i>
+                    </div>
+                </div>
+
+                <div id="person-fields-container">
+                    <div class="person-field-set" data-person-id="1">
+                        <h3>Invitado 1</h3>
+                        <div class="form-group">
+                            <label for="name-1">Nombre *</label>
+                            <input type="text" id="name-1" name="name-1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname-1">Apellido *</label>
+                            <input type="text" id="lastname-1" name="lastname-1" required>
+                        </div>
+                        <div class="form-group">
+                            <p>¿Confirmas tu asistencia? *</p>
+                            <label class="radio-label">
+                                <input type="radio" name="confirm-1" value="Si" required> ¡Confirmo!
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="confirm-1" value="No"> No podré asistir
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="food-req-1">¿Algún requerimiento en la alimentación?</label>
+                            <div class="select-wrapper">
+                                <select id="food-req-1" name="food-req-1" class="form-select">
+                                    <option value="Ninguno">Ninguno</option>
+                                    <option value="Vegetariano">Vegetariano</option>
+                                    <option value="Vegano">Vegano</option>
+                                    <option value="Celíaco">Celíaco</option>
+                                    <option value="Otro">Otro (especificar en canción)</option>
+                                </select>
+                                <i class="fas fa-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="song-req-1">¿Qué canción no puede faltar?</label>
+                            <input type="text" id="song-req-1" name="song-req-1">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="confirm-button">Confirmar</button>
+            </form>
+        </section>
+
+        
+    </main>
+    <footer>
+        <section id="te-espero" class="te-espero-section">
+            <div class="te-espero-content">
+                <h2>TE ESPERO</h2>
+            </div>
+        </section>
+    </footer>
+    <div id="price-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p><small>abonar antes del 01 de diciembre</small></p>
+            <h3>VALOR DE LA TARJETA</h3>
+            <p>Mayores: $60000</p>
+            <p>Menores(de 6 a 12 años): $22000</p>
+            <p>Menores(de 5 años): $10000</p>
+            <p><small>METODOS DE PAGO: transferencia bancaria o efectivo</small></p>
+            <p><small>ALIAS: mf.vicentin </small></p>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@use '../utilities/variables';
+main {
+    // Asegura que el contenido principal ocupe todo el ancho
+    width: 100%;
+    overflow: hidden;
+}

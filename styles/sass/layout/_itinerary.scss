@@ -1,0 +1,79 @@
+/* styles/sass/layout/_itinerary.scss */
+
+@use '../utilities/variables'; /* ¡IMPORTACIÓN CORREGIDA! */
+
+.itinerary-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: variables.$color-secundario; // Fondo claro para la sección completa
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; 
+    
+    .itinerary-card {
+        padding: 40px 30px;
+        margin-bottom: 30px; // Espacio entre las tarjetas
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px; 
+        
+        .icon-large {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-family: variables.$font-titulo;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-family: variables.$font-cuerpo;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+    }
+
+    // Estilos específicos para la tarjeta de fecha (Fondo más oscuro)
+    .when-card {
+        background-color: variables.$color-primario; 
+        color: variables.$color-texto-claro;
+        
+        .icon-large {
+            color: variables.$color-texto-claro;
+        }
+    }
+
+    // Estilos específicos para la tarjeta de ubicación (Fondo más claro)
+    .where-card {
+        background-color: variables.$color-secundario; 
+        color: variables.$color-texto-oscuro; 
+        border: 1px solid variables.$color-acento; 
+        
+        .icon-large {
+            color: variables.$color-primario; 
+        }
+        
+        .map-button {
+            background-color: transparent;
+            color: variables.$color-primario;
+            border: 2px solid variables.$color-primario;
+            padding: 12px 25px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: variables.$font-cuerpo;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: variables.$color-primario;
+                color: variables.$color-texto-claro;
+            }
+        }
+    }
+}

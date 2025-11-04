@@ -1,0 +1,542 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F7F5F0; /* Fondo crema/claro definido en variables */
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  overflow-x: hidden; /* Evita barras de scroll horizontales */
+}
+
+main {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* styles/sass/layout/_landing.scss */
+.landing-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #F7F5F0;
+}
+.landing-container h1 {
+  font-family: "Playfair Display", serif; /* ¡CORREGIDO! Usamos $font-titulo */
+  font-size: 4rem;
+  color: #587C53;
+  margin-bottom: 0.5rem;
+}
+.landing-container .subtitle {
+  font-family: "Roboto", sans-serif; /* Usamos $font-cuerpo o déjalo en 'Arial' si quieres */
+  font-size: 1.5rem;
+  color: #333333; /* Usamos variable para consistencia */
+  margin-bottom: 2rem;
+}
+.landing-container #enter-button {
+  background-color: #587C53;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.landing-container #enter-button:hover {
+  background-color: rgb(66.3188405797, 93.4492753623, 62.5507246377); /* ¡CORREGIDO! Usar color.darken */
+  transform: scale(1.05);
+}
+
+/* styles/sass/layout/_hero.scss */
+/* ¡IMPORTACIÓN CORREGIDA! */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0 60px 0;
+  background-color: #F7F5F0;
+}
+.hero-section .hero-image {
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.countdown-timer .countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+.countdown-timer .countdown-item .countdown-number {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #587C53;
+  line-height: 1;
+}
+.countdown-timer .countdown-item .countdown-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  color: #333333;
+  margin-top: 5px;
+}
+
+/* styles/sass/layout/_itinerary.scss */
+/* ¡IMPORTACIÓN CORREGIDA! */
+.itinerary-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #F7F5F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.itinerary-section .itinerary-card {
+  padding: 40px 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.itinerary-section .itinerary-card .icon-large {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+.itinerary-section .itinerary-card .card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.itinerary-section .itinerary-card .card-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+.itinerary-section .when-card {
+  background-color: #587C53;
+  color: #FFFFFF;
+}
+.itinerary-section .when-card .icon-large {
+  color: #FFFFFF;
+}
+.itinerary-section .where-card {
+  background-color: #F7F5F0;
+  color: #333333;
+  border: 1px solid #A0B99B;
+}
+.itinerary-section .where-card .icon-large {
+  color: #587C53;
+}
+.itinerary-section .where-card .map-button {
+  background-color: transparent;
+  color: #587C53;
+  border: 2px solid #587C53;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.itinerary-section .where-card .map-button:hover {
+  background-color: #587C53;
+  color: #FFFFFF;
+}
+
+/* styles/sass/layout/_phrases.scss */
+/* ¡IMPORTACIÓN CORREGIDA! */
+.invitation-phrase-section {
+  background-color: #587C53;
+  padding: 80px 20px;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+.invitation-phrase-section .phrase-container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.invitation-phrase-section .phrase-container::before, .invitation-phrase-section .phrase-container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 300px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.invitation-phrase-section .phrase-container::before {
+  top: 0;
+}
+.invitation-phrase-section .phrase-container::after {
+  bottom: 0;
+}
+.invitation-phrase-section .phrase-container p {
+  margin: 0;
+}
+.invitation-phrase-section .phrase-container p strong {
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+}
+
+.te-espero-section {
+  background: url("../assets/images/fireworks.jpg") no-repeat center center/cover;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%; /* Aseguramos el ancho completo */
+}
+.te-espero-section .te-espero-content {
+  /* ELIMINAMOS EL FONDO SEMITRANSPARENTE */
+  background-color: transparent;
+  padding: 0; /* Eliminamos el padding que lo hacía grande */
+  border-radius: 0;
+}
+.te-espero-section .te-espero-content h2 {
+  font-family: "Playfair Display", serif;
+  /* ESTE ES EL TAMAÑO DE MÓVIL/BASE: DEBE SER PEQUEÑO PARA CABER */
+  font-size: 2.3rem; /* ¡AJUSTAR A UN TAMAÑO QUE NO ROMPA EL RENGLÓN! */
+  margin: 0;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.7);
+  color: #FFFFFF;
+}
+
+/* styles/sass/layout/_rsvp.scss */
+.rsvp-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #F7F5F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rsvp-section .rsvp-header {
+  margin-bottom: 40px;
+}
+.rsvp-section .rsvp-header .icon-large {
+  font-size: 4rem;
+  color: #587C53;
+  margin-bottom: 20px;
+}
+.rsvp-section .rsvp-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.rsvp-section .rsvp-header p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.rsvp-section .rsvp-header .price-button {
+  background-color: #FFFFFF;
+  color: #333333;
+  border: 1px solid #A0B99B;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.rsvp-section .rsvp-header .price-button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.rsvp-section .rsvp-header .price-button:hover {
+  background-color: #A0B99B;
+  color: #FFFFFF;
+}
+.rsvp-section .rsvp-form-container {
+  background-color: #587C53;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.rsvp-section .rsvp-form-container h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.rsvp-section .rsvp-form-container h3:first-of-type {
+  margin-top: 0;
+}
+.rsvp-section .rsvp-form-container .form-group {
+  margin-bottom: 20px;
+}
+.rsvp-section .rsvp-form-container .form-group label {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+.rsvp-section .rsvp-form-container .form-group input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+.rsvp-section .rsvp-form-container .form-group input[type=text]:focus {
+  outline: none;
+  border-bottom: 1px solid #FFFFFF;
+}
+.rsvp-section .rsvp-form-container .form-group .select-wrapper {
+  position: relative;
+  width: 100%;
+}
+.rsvp-section .rsvp-form-container .form-group .select-wrapper .form-select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  -webkit-appearance: none; /* Elimina estilos por defecto de navegador */
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.rsvp-section .rsvp-form-container .form-group .select-wrapper .form-select option {
+  background-color: #86be7e;
+  color: #FFFFFF;
+}
+.rsvp-section .rsvp-form-container .form-group .select-wrapper .form-select:focus {
+  outline: none;
+  border-bottom: 1px solid #FFFFFF;
+}
+.rsvp-section .rsvp-form-container .form-group .select-wrapper .select-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+.rsvp-section .rsvp-form-container .form-group input[type=radio] {
+  margin-right: 8px;
+}
+.rsvp-section .rsvp-form-container .form-group .radio-label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.rsvp-section .rsvp-form-container .confirm-button {
+  background-color: #FFFFFF;
+  color: #86be7e;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.rsvp-section .rsvp-form-container .confirm-button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.rsvp-section .rsvp-form-container .confirm-button:hover {
+  background-color: rgb(229.5, 229.5, 229.5);
+  transform: scale(1.02);
+}
+
+/* Estilos para el Modal (Ventana Emergente de Precio) */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Posición fija para cubrir toda la pantalla */
+  z-index: 1000; /* Por encima de todo lo demás */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Permite scroll si el contenido es largo */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente oscuro */
+  justify-content: center;
+  align-items: center;
+}
+.modal.open {
+  display: flex; /* Mostrar cuando tenga la clase 'open' */
+}
+.modal .modal-content {
+  background-color: #F7F5F0;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #A0B99B;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  color: #333333;
+}
+.modal .modal-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #587C53;
+  margin-bottom: 15px;
+}
+.modal .modal-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.modal .modal-content p strong {
+  font-weight: 700;
+  color: #333333;
+}
+.modal .modal-content small {
+  font-size: 0.85rem;
+  color: #666;
+}
+.modal .modal-content .close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.modal .modal-content .close-button:hover, .modal .modal-content .close-button:focus {
+  color: #587C53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 0;
+}
+footer p {
+  color: #333333;
+  padding: 20px 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* styles/sass/mq/_responsive.scss */
+@media (min-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+  .hero-section,
+  .itinerary-section,
+  .rsvp-section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .countdown-timer {
+    gap: 30px;
+  }
+  .countdown-timer .countdown-item .countdown-number {
+    font-size: 4rem;
+  }
+  .itinerary-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch; /* Mantiene la misma altura */
+    gap: 30px;
+  }
+  .itinerary-card:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente (arriba/abajo) */
+    align-items: center; /* Centra el contenido horizontalmente (izquierda/derecha) */
+  }
+  .itinerary-card {
+    width: 45%;
+    margin-bottom: 0;
+    padding: 50px 30px;
+  }
+  .te-espero-section .te-espero-content h2 {
+    font-size: 3.5rem;
+  }
+  .rsvp-section .rsvp-form-container {
+    max-width: 700px;
+    padding: 50px 40px;
+  }
+  .modal .modal-content {
+    max-width: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  .hero-section,
+  .itinerary-section,
+  .rsvp-section {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .countdown-timer .countdown-item .countdown-number {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  .itinerary-section .itinerary-card {
+    width: 40%;
+  }
+  .rsvp-section .rsvp-form-container {
+    max-width: 800px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

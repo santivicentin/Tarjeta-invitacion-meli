@@ -1,0 +1,235 @@
+/* styles/sass/layout/_rsvp.scss */
+
+@use '../utilities/variables';
+@use '../utilities/mixins';
+@use "sass:color"; // Para usar funciones de color como darken
+
+.rsvp-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: variables.$color-secundario;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .rsvp-header {
+        margin-bottom: 40px;
+        .icon-large {
+            font-size: 4rem;
+            color: variables.$color-primario;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-family: variables.$font-titulo;
+            font-size: 2.5rem;
+            color: variables.$color-texto-oscuro;
+            margin-bottom: 10px;
+        }
+        p {
+            font-family: variables.$font-cuerpo;
+            font-size: 1rem;
+            color: variables.$color-texto-oscuro;
+            margin-bottom: 20px;
+        }
+        .price-button {
+            background-color: variables.$color-texto-claro;
+            color: variables.$color-texto-oscuro;
+            border: 1px solid variables.$color-acento;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: variables.$font-cuerpo;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            @include mixins.soft-shadow; // Usamos el mixin de sombra
+
+            &:hover {
+                background-color: variables.$color-acento;
+                color: variables.$color-texto-claro;
+            }
+        }
+    }
+
+    .rsvp-form-container {
+        background-color: variables.$color-primario; // Fondo del formulario, similar a la frase
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px; // Ancho máximo del formulario
+        text-align: left;
+        color: variables.$color-texto-claro;
+
+        h3 {
+            font-family: variables.$font-titulo;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: variables.$color-texto-claro;
+            &:first-of-type {
+                margin-top: 0; // Sin margen superior para el primer h3
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            label {
+                display: block;
+                font-family: variables.$font-cuerpo;
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+            }
+            input[type="text"] {
+                width: 100%;
+                padding: 12px;
+                border: none;
+                border-bottom: 1px solid rgba(variables.$color-texto-claro, 0.5);
+                background-color: transparent;
+                color: variables.$color-texto-claro;
+                font-family: variables.$font-cuerpo;
+                font-size: 1rem;
+                &:focus {
+                    outline: none;
+                    border-bottom: 1px solid variables.$color-texto-claro;
+                }
+            }
+            .select-wrapper {
+                position: relative;
+                width: 100%;
+                .form-select {
+                    width: 100%;
+                    padding: 12px;
+                    border: none;
+                    border-bottom: 1px solid rgba(variables.$color-texto-claro, 0.5);
+                    background-color: transparent;
+                    color: variables.$color-texto-claro;
+                    font-family: variables.$font-cuerpo;
+                    font-size: 1rem;
+                    -webkit-appearance: none; /* Elimina estilos por defecto de navegador */
+                    -moz-appearance: none;
+                    appearance: none;
+                    cursor: pointer;
+                    option {
+                        background-color: variables.$color-fondo-frase; // Fondo para las opciones
+                        color: variables.$color-texto-claro;
+                    }
+                    &:focus {
+                        outline: none;
+                        border-bottom: 1px solid variables.$color-texto-claro;
+                    }
+                }
+                .select-arrow {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: rgba(variables.$color-texto-claro, 0.8);
+                    pointer-events: none; // Permite hacer clic en el select, no en la flecha
+                }
+            }
+            input[type="radio"] {
+                margin-right: 8px;
+            }
+            .radio-label {
+                display: inline-flex; // Para alinear el radio y el texto
+                align-items: center;
+                margin-right: 20px;
+                font-family: variables.$font-cuerpo;
+                font-size: 0.95rem;
+                cursor: pointer;
+            }
+        }
+
+        .confirm-button {
+            background-color: variables.$color-texto-claro;
+            color: variables.$color-fondo-frase;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-family: variables.$font-titulo;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 30px;
+            @include mixins.soft-shadow;
+
+            &:hover {
+                background-color: darken(variables.$color-texto-claro, 10%);
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+/* Estilos para el Modal (Ventana Emergente de Precio) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija para cubrir toda la pantalla */
+    z-index: 1000; /* Por encima de todo lo demás */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite scroll si el contenido es largo */
+    background-color: rgba(0,0,0,0.6); /* Fondo semi-transparente oscuro */
+    justify-content: center;
+    align-items: center;
+
+    &.open {
+        display: flex; /* Mostrar cuando tenga la clase 'open' */
+    }
+
+    .modal-content {
+        background-color: variables.$color-secundario;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid variables.$color-acento;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        color: variables.$color-texto-oscuro;
+        
+        h3 {
+            font-family: variables.$font-titulo;
+            font-size: 1.8rem;
+            color: variables.$color-primario;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-family: variables.$font-cuerpo;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            strong {
+                font-weight: 700;
+                color: variables.$color-texto-oscuro;
+            }
+        }
+
+        small {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            &:hover, &:focus {
+                color: variables.$color-primario;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

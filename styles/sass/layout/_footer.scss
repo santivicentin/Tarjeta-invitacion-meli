@@ -1,0 +1,14 @@
+@use '../utilities/variables';
+footer {
+    // El background de imagen ya se aplica en .te-espero-section (dentro de _phrases.scss)
+    text-align: center;
+    padding: 0; // El padding lo maneja la sección #te-espero
+
+    // Estilo para cualquier texto adicional que quieras poner en el footer
+    p {
+        color: variables.$color-texto-oscuro; 
+        padding: 20px 0;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+}

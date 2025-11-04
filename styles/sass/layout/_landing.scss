@@ -1,0 +1,46 @@
+/* styles/sass/layout/_landing.scss */
+@use "sass:color";
+@use '../utilities/variables';
+@use '../utilities/mixins'; // Asegúrate de importar mixins para usar darken()
+
+
+.landing-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: variables.$color-secundario;
+
+  h1 {
+    font-family: variables.$font-titulo; /* ¡CORREGIDO! Usamos $font-titulo */
+    font-size: 4rem;
+    color: variables.$color-primario;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-family: variables.$font-cuerpo; /* Usamos $font-cuerpo o déjalo en 'Arial' si quieres */
+    font-size: 1.5rem;
+    color: variables.$color-texto-oscuro; /* Usamos variable para consistencia */
+    margin-bottom: 2rem;
+  }
+
+  #enter-button {
+    background-color: variables.$color-primario;
+    color: variables.$color-texto-claro;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+       background-color: darken(variables.$color-primario, 10%); /* ¡CORREGIDO! Usar color.darken */
+      transform: scale(1.05);
+     
+    }
+  }
+}
