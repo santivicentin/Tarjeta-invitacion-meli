@@ -38,7 +38,7 @@ main {
   font-family: "Roboto", sans-serif; /* Usamos $font-cuerpo o déjalo en 'Arial' si quieres */
   font-size: 1.5rem;
   color: #333333; /* Usamos variable para consistencia */
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 .landing-container #enter-button {
   background-color: #85835c;
